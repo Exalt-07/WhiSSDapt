@@ -1,6 +1,4 @@
 #!/bin/bash
-
-cd /sd1/jhansi/interns/somesh/whisper-asl/ || exit 1
 mkdir -p logs
 
 # ======================================================
@@ -16,7 +14,7 @@ torchrun --nproc_per_node=1 -m whistress.training.train \
 
 
 # ======================================================
-# GER-stress (COMMENTED OUT)
+# GER-stress
 # ======================================================
 # torchrun --nproc_per_node=1 -m whistress.training.train \
 #     --dataset_path GER-stress-preprocessed-GT \
@@ -28,7 +26,7 @@ torchrun --nproc_per_node=1 -m whistress.training.train \
 
 
 # ======================================================
-# ITA-stress (ACTIVE - ORIGINAL)
+# ITA-stress 
 # ======================================================
 # torchrun --nproc_per_node=1 -m whistress.training.train \
 #     --dataset_path ITA-stress-preprocessed-GT \
